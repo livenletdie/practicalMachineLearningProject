@@ -17,7 +17,7 @@ After downloading the pml-training.csv file and loading it into R, the first thi
 
 ## Cleaning the data values
 
-I inspected the individual values in the training file. I noticed that some of the cells had value "" or ""#DIV/0!". Clearly, these did not look like valid recordings and so I replaced them with NA. 
+I inspected the individual values in the training file and plotted the histograms of each column. I noticed that some of the cells had value "" or ""#DIV/0!". Clearly, these did not look like valid recordings and so I replaced them with NA. 
 
 > Note: Even after replacing the above character values with NA, the R data frame continues to maintain the class of these columns as factors. I guess this is because the column type is determined at the time the data is read but not re-evaluated as the values change. So I had to manually coerce many of the columms to have type "numeric" using lapply and as.numeric
 
@@ -61,7 +61,7 @@ Overall Statistics
  Mcnemar's Test P-Value : NA         
 
 Statistics by Class:
-
+* Class A B C D E
 * Sensitivity            1.0000   1.0000   1.0000   1.0000   1.0000
 * Specificity            1.0000   1.0000   1.0000   1.0000   1.0000
 * Pos Pred Value         1.0000   1.0000   1.0000   1.0000   1.0000
@@ -72,3 +72,5 @@ Statistics by Class:
 * Balanced Accuracy      1.0000   1.0000   1.0000   1.0000   1.0000
 
 # Summary
+
+In this project, the most time I spent was getting data into shape so that the training and prediction functions in Caret package would play nicely with them. Also, many of the insights/issues I identified were by manually inspecting the column titles or by plotting the histogram of each column. My intuition told me that this classification problem would be much more amenable to a decision tree that is non-linear in the feature vectors and does not depend on scaling of the individual columns instead of a linear equation of the different columns involved. The high accuracy of my model confirms that intuition.
