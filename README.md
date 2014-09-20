@@ -44,11 +44,11 @@ These results were good but a little scary because I thought I might have overfi
 I performed the same preprocessing steps on my testing data as well. I got very very good results.
 
 * Prediction    A    B    C    D    E
-* A 1395    0    0    0    0
-* B    0  949    0    0    0
-* C    0    0  855    0    0
-* D    0    0    0  804    0
-* E    0    0    0    0  901
+*          A 1395    0    0    0    0
+*          B    0  949    0    0    0
+*          C    0    0  855    0    0
+*          D    0    0    0  804    0
+*          E    0    0    0    0  901
 
 Overall Statistics
                                      
@@ -62,13 +62,13 @@ Overall Statistics
 
 Statistics by Class:
 
-Sensitivity            1.0000   1.0000   1.0000   1.0000   1.0000
-Specificity            1.0000   1.0000   1.0000   1.0000   1.0000
-Pos Pred Value         1.0000   1.0000   1.0000   1.0000   1.0000
-Neg Pred Value         1.0000   1.0000   1.0000   1.0000   1.0000
-Prevalence             0.2845   0.1935   0.1743   0.1639   0.1837
-Detection Rate         0.2845   0.1935   0.1743   0.1639   0.1837
-Detection Prevalence   0.2845   0.1935   0.1743   0.1639   0.1837
-Balanced Accuracy      1.0000   1.0000   1.0000   1.0000   1.0000
+* Sensitivity            1.0000   1.0000   1.0000   1.0000   1.0000
+* Specificity            1.0000   1.0000   1.0000   1.0000   1.0000
+* Pos Pred Value         1.0000   1.0000   1.0000   1.0000   1.0000
+* Neg Pred Value         1.0000   1.0000   1.0000   1.0000   1.0000
+* Prevalence             0.2845   0.1935   0.1743   0.1639   0.1837
+* Detection Rate         0.2845   0.1935   0.1743   0.1639   0.1837
+* Detection Prevalence   0.2845   0.1935   0.1743   0.1639   0.1837
+* Balanced Accuracy      1.0000   1.0000   1.0000   1.0000   1.0000
 
 # Summary
