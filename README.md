@@ -43,7 +43,6 @@ These results were good but a little scary because I thought I might have overfi
 
 I performed the same preprocessing steps on my testing data as well. I got very very good results.
 
-              Reference
 Prediction    A    B    C    D    E
          A 1395    0    0    0    0
          B    0  949    0    0    0
@@ -63,7 +62,6 @@ Overall Statistics
 
 Statistics by Class:
 
-                       Class: A Class: B Class: C Class: D Class: E
 Sensitivity            1.0000   1.0000   1.0000   1.0000   1.0000
 Specificity            1.0000   1.0000   1.0000   1.0000   1.0000
 Pos Pred Value         1.0000   1.0000   1.0000   1.0000   1.0000
