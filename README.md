@@ -24,7 +24,8 @@ I inspected the individual values in the training file and plotted the histogram
 
 ## Pre-processing
 
-Once convinced that individual recordings are valid, I then inspected each column to identify columns with little to no variance. For this, I used the nearZeroVar function with uniqueCut=0.1 and default settings otherwise. I removed the columns that the nearZeroVar function identified.
+__Reducing Out-of-sample error by avoiding skewed variables__
+Once convinced that individual recordings are valid, I then inspected each column to identify columns with skewed distributions or little to no variance. For this, I used the nearZeroVar function with uniqueCut=0.1 and default settings otherwise. I removed the columns that the nearZeroVar function identified.
 
 The only outstanding issue now was the NA values because the samples with NA are ignored by the train/predict function. I used "knnImpute" preprocessing step to fill in the NA values. 
 
