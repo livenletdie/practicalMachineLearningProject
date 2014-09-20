@@ -15,6 +15,10 @@ After downloading the pml-training.csv file and loading it into R, the first thi
 * raw_timestamp_part_1
 * raw_timestamp_part_2
 * cvtd_timestamp
+*
+
+
+> Note: First time around, I missed the column "X" in this step. This lead to near perfect prediction accuracy for my training and testing set (100% accuracy for both in-sampel and out-of-sample error). But, it looked too good to be true. When I ran the pml-testing.csvm and got all A's I realized my model must have some dependency on the row number because all the class samples are ordered in the pml-training.csv file.
 
 ## Cleaning the data values
 
@@ -36,42 +40,14 @@ For training, I decided to use the Gradient Boosted Method ("gbm") for training.
 
 Using this, I got:
 
-  Accuracy  Kappa  Accuracy SD  Kappa SD
-  1         0.999  0.000574     0.000725
+
 
 These results were good but a little scary because I thought I might have overfit my decision tree for my training data. I did not want to test my model on the testing data because I did not have a validation set and so I will get to run my model on the testing set only once. I performed repeated cross validation (repeatedcv) with 10 repeatitions but that did not change my accuracy, which gave me higher confidence.  
 
 # Prediction
 
-I performed the same preprocessing steps on my testing data as well. I got very very good results.
+I performed the same preprocessing steps on my testing data as well. I got good results.
 
-* Prediction    A    B    C    D    E
-*           A 1395    0    0    0    0
-*          B    0  949    0    0    0
-*          C    0    0  855    0    0
-*          D    0    0    0  804    0
-*          E    0    0    0    0  901
-
-Overall Statistics
-                                     
-               Accuracy : 1          
-                 95% CI : (0.9992, 1)
-    No Information Rate : 0.2845     
-    P-Value [Acc > NIR] : < 2.2e-16  
-                                     
-                  Kappa : 1          
- Mcnemar's Test P-Value : NA         
-
-Statistics by Class:
-* Class A B C D E
-* Sensitivity            1.0000   1.0000   1.0000   1.0000   1.0000
-* Specificity            1.0000   1.0000   1.0000   1.0000   1.0000
-* Pos Pred Value         1.0000   1.0000   1.0000   1.0000   1.0000
-* Neg Pred Value         1.0000   1.0000   1.0000   1.0000   1.0000
-* Prevalence             0.2845   0.1935   0.1743   0.1639   0.1837
-* Detection Rate         0.2845   0.1935   0.1743   0.1639   0.1837
-* Detection Prevalence   0.2845   0.1935   0.1743   0.1639   0.1837
-* Balanced Accuracy      1.0000   1.0000   1.0000   1.0000   1.0000
 
 # Summary
 
