@@ -8,7 +8,7 @@ I divided my dataset to training and testing set using createDataPartition. I di
 
 # Data Cleaning
 
-## Removing columns that will not generalize to future samples
+## Removing columns that will not generalize to future samples (Out-of-sample errors)
 After downloading the pml-training.csv file and loading it into R, the first thing I wanted to do was identify columns that I believed won't be useful when predicting for other samples not in my training set. For example, one of the columns in the dataset is "user_name". If my prediction model uses this column, then it might give accurate predictions for my training set but it will not generalize to accurately predict the classe for device reading for other users not in my traning set. It was a laborious and subjective step but I was trying to understand what inform each column captures so that I can decide if it is worth keeping in my model or not. I removed the following columns in this step:
 * user_name
 * raw_timestamp_part_1
