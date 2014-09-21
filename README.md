@@ -40,7 +40,8 @@ For training, I decided to use the Gradient Boosted Method ("gbm") for training.
 
 Using this, I got:
 
->  Accuracy  Kappa  Accuracy SD  Kappa SD
+Accuracy  Kappa  Accuracy SD  Kappa 
+---
    0.96      0.95   0.00417      0.00527 
 
 
