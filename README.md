@@ -36,7 +36,7 @@ The only outstanding issue now was the NA values because the samples with NA are
 
 # Training the model
 
-For training, I decided to use the Gradient Boosted Method ("gbm") for training. The first time I ran the train function with just the training data and method set to "gbm". After trying a number of options, the training function reported back that the best accuracy was obtained at n.trees=50. Next, I decided to better control my experiment by controlling the turning parameters myself by specifying the tuneGrid parameter. After trying multiple parameters, I decided on using: interaction.depth=2, n.trees=50, shrinkage=0.1. I used 10-fold cross validation to avoid over-fitting.
+For training, I decided to use the Gradient Boosted Method ("gbm") for training. The first time I ran the train function with just the training data and method set to "gbm". After trying a number of options, the training function reported back that the good accuracy was obtained at n.trees=100 and interaction.depth=4. Next, I decided to better control my experiment by controlling the turning parameters myself by specifying the tuneGrid parameter. After trying multiple parameters, I decided on using: interaction.depth=4, n.trees=100, shrinkage=0.1. I used 10-fold cross validation to avoid over-fitting.
 
 Using this, I got:
 
@@ -75,4 +75,4 @@ Statistics by Class:
 
 # Summary
 
-In this project, the most time I spent was getting data into shape so that the training and prediction functions in Caret package would play nicely with them. Also, many of the insights/issues I identified were by manually inspecting the column titles or by plotting the histogram of each column. My intuition told me that this classification problem would be much more amenable to a decision tree that is non-linear in the feature vectors and does not depend on scaling of the individual columns instead of a linear equation of the different columns involved. The high accuracy of my model confirms that intuition.
+In this project, the most time I spent was getting data into shape so that the training and prediction functions in Caret package would play nicely with them. Also, many of the insights/issues I identified were by manually inspecting the column titles or by plotting the histogram of each column. My intuition told me that this classification problem would be much more amenable to a decision tree that is non-linear in the feature vectors and does not depend on scaling of the individual columns. I did not think that we could treat each column independently (Naive Bayes assumption) or model it as a linear equation of the different columns involved. The high accuracy of my model confirms that intuition.
