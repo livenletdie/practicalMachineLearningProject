@@ -39,6 +39,8 @@ The only outstanding issue now was the NA values because the samples with NA are
 For training, I decided to use the Gradient Boosted Method ("gbm") for training. The first time I ran the train function with just the training data and method set to "gbm". After trying a number of options, the training function reported back that the best accuracy was obtained at n.trees=50. Next, I decided to better control my experiment by controlling the turning parameters myself by specifying the tuneGrid parameter. After trying multiple parameters, I decided on using: interaction.depth=2, n.trees=50, shrinkage=0.1. I used 10-fold cross validation to avoid over-fitting.
 
 Using this, I got:
+  Accuracy  Kappa  Accuracy SD  Kappa SD
+  0.96      0.95   0.00417      0.00527 
 
 
 
@@ -48,6 +50,27 @@ These results were good but a little scary because I thought I might have overfi
 
 I performed the same preprocessing steps on my testing data as well. I got good results.
 
+Overall Statistics
+                                          
+               Accuracy : 0.9619          
+                 95% CI : (0.9561, 0.9671)
+    No Information Rate : 0.2845          
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.9518          
+ Mcnemar's Test P-Value : 0.0002105       
+
+Statistics by Class:
+
+* Class: A Class: B Class: C Class: D Class: E
+* Sensitivity            0.9835   0.9452   0.9544   0.9490   0.9645
+* Specificity            0.9909   0.9871   0.9830   0.9934   0.9980
+* Pos Pred Value         0.9772   0.9462   0.9220   0.9658   0.9909
+* Neg Pred Value         0.9934   0.9869   0.9903   0.9900   0.9921
+* Prevalence             0.2845   0.1935   0.1743   0.1639   0.1837
+* Detection Rate         0.2798   0.1829   0.1664   0.1556   0.1772
+* Detection Prevalence   0.2863   0.1933   0.1805   0.1611   0.1788
+* Balanced Accuracy      0.9872   0.9662   0.9687   0.9712   0.9812
 
 # Summary
 
